@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#body_id{
+			background: palegoldenrod;
+		}
+		#container_id{
+			display: flex; /* flexible box layout (needs this to work the bottom 2) */
+			justify-content: center; /* this is horizontal */
+			align-items: center; /* this is vertical */
+			height: 100vh;
+
+		}
+		#frame_id{
+			width: 500px;
+			height: 300px;
+			background: lightyellow;
+			text-align: center ;
+		}
+		#title_id{
+			font-size: 150%;
+			margin-top: 5%;
+			font-family: monospace;
+		}
+		#input_frame_id{
+			margin-top: 5%;
+		}
+		button{
+			margin-top: 20%;
+			font-size: 100%;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function login() {
+			var account = document.getElementById('account_input_id').value;
+			var password = document.getElementById('password_input_id').value;
+
+			if(account == "HI" && password =="BYE"){
+				//alert("you LOGGED IN");
+				location.href = "plage.html";
+			}
+			else{
+				location.href = "hiohiooih.html"
+			}
+		}
+		function dark() {
+			document.getElementById('body_id').style.backgroundColor = "#031729";
+			document.getElementById('frame_id').style.backgroundColor = "#030729";
+			document.getElementById('body_id').style.color = "#fff396";
+		}
+		function light() {
+			document.getElementById('body_id').style.backgroundColor = "palegoldenrod";
+			document.getElementById('frame_id').style.backgroundColor = "lightyellow";
+			document.getElementById('body_id').style.color = "black";
+		}
+
+	</script>
+</head>
+<body id="body_id">
+	<div id="container_id">
+		<div id="frame_id"> 
+			<div id="title_id">LOGIN_SYSTEM</div> 
+				<div id="input_frame_id">
+				<input type="" id="account_input_id" placeholder="username">
+				<br><br>
+
+				<input type="password" id="password_input_id" placeholder="password">
+			</div>
+
+
+			<button onclick="login()">Login or something</button>
+			<br>
+			<button onclick="dark()">Dark mode</button>
+			<button onclick="light()">Yellwo mode</button>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
